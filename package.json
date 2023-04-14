@@ -1,0 +1,22 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "pretty": "./node_modules/.bin/prettier --write resources/**/*.blade.php"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.14",
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.7.2",
+        "postcss": "^8.4.21",
+        "tailwindcss": "^3.2.7",
+        "prettier": "^2.8.7",
+        "@shufo/prettier-plugin-blade": "^1.8.12",
+        "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "@alpinejs/focus": "^3.12.0",
+        "alpinejs": "^3.12.0"
+    }
+}

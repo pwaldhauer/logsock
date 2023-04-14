@@ -1,0 +1,8 @@
+---
+version: '3'
+services:
+    logsock:
+        image: r.knspr.space/logsock:latest
+        ports:
+            - "0.0.0.0:9990:9901"
+        restart: always
