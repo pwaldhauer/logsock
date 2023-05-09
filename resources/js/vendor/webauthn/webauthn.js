@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-class WebAuthn {
+export default class WebAuthn {
     /**
      * Routes for WebAuthn assertion (login) and attestation (register).
      *
@@ -157,7 +157,7 @@ class WebAuthn {
      */
     #fetch(data, route, headers = {}) {
         const url = new URL(route, window.location.origin).href;
-        
+
         return fetch(url, {
             method: "POST",
             credentials: this.#includeCredentials ? "include" : "same-origin",
