@@ -1,5 +1,8 @@
 # logsock
 
+
+![Logo](public/img/cat-small.png)
+
 A really simple web app to log stuff and send notifications. 
 It uses the [Web Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) to send notifications to your phone or desktop browser.
 
@@ -7,6 +10,8 @@ Example use cases:
 
 - Notify yourself after a long running task has finished
 - Receive alerts from monitoring tools
+
+![Screenshot](logsock-screenshot.png)
 
 ## Setup
 
@@ -38,6 +43,7 @@ services:
       - "127.0.0.1:9901:9901"
     environment:
       - TRUST_PROXIES="*"
+      - APP_URL="https://logsock.example.com"
       - VAPID_SUBJECT="mailto:foo@example.com"
       - VAPID_PRIVATE_KEY="xxx"
       - VAPID_PUBLIC_KEY="xxx"
