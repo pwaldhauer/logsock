@@ -59,7 +59,7 @@ volumes:
 - Of course, you could also install it without docker, it should work on any PHP 8.2+ installations:
 
 ```
-npm run dev
+npm run build
 composer install
 cp .env.example .env
 
