@@ -35,6 +35,6 @@ class Log extends Model
 
     public function levelLabel()
     {
-       return self::MAP[$this->level];
+        return self::MAP[$this->level];
     }
 }

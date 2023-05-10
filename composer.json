@@ -1,29 +1,23 @@
 {
-    "name": "laravel/laravel",
+    "name": "pwaldhauer/logsock",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "A really simple web app to log stuff and send notifications. ",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "repositories": [
         {
-            "type": "path",
-            "url": "../_pwblui",
-            "options": {
-                "symlink": false
-            }
+            "type": "vcs",
+            "url": "https://github.com/pwaldhauer/pwablui.git"
         }
     ],
     "require": {
         "php": "^8.2",
-        "blade-ui-kit/blade-heroicons": "^2.1",
         "laravel/framework": "^10.0",
         "laravel/sanctum": "^3.2",
-        "laravel/scout": "^10.0",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^2.12",
         "minishlink/web-push": "^8.0",
-        "pwaio/pwablui": "@dev",
-        "wire-elements/modal": "^1.0"
+        "pwaio/pwablui": "dev-main"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
