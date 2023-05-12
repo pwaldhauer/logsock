@@ -23,11 +23,9 @@ Example use cases:
 npx web-push generate-vapid-keys
 
 # using openssl
-openssl ecparam -name prime256v1 -genkey -noout -out vapid_private_key.pem
-openssl ec -in vapid_private_key.pem -pubout -out vapid_public_key.pem
-echo -n VAPID_PRIVATE_KEY=;cat vapid_private_key.pem | sed -e "1 d" -e "$ d" | tr -d "\n"; echo
-echo -n VAPID_PUBLIC_KEY=;cat vapid_public_key.pem | sed -e "1 d" -e "$ d" | tr -d "\n"; echo
-
+openssl ecparam -genkey -name prime256v1 -out private_key.pem
+echo VAPID_PUBLIC_KEY=$(openssl ec -in private_key.pem -pubout -outform DER|tail -c 65|base64|tr -d '=' |tr '/+' '_-')
+echo VAPID_PRIVATE_KEY=$(openssl ec -in private_key.pem -outform DER|tail -c +8|head -c 32|base64|tr -d '=' |tr '/+' '_-')
 
 ```
 
